@@ -2,7 +2,7 @@
 
 # http://makeitopen.com/tutorials/building-the-f8-app/local-setup/
 cd ..
-git clone https://github.com/fbsamples/f8app.git
+git clone https://github.com/aviggiano/f8app.git
 cd f8app
 yarn
 # npm start 
