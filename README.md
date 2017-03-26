@@ -1,2 +1,2 @@
-# react-native-setup
-React native setup
+# setup
+setup
