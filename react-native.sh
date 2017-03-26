@@ -4,7 +4,7 @@ ANDROID_STUDIO_URL="https://dl.google.com/dl/android/studio/ide-zips/2.3.0.8/and
 
 # http://facebook.github.io/react-native/docs/getting-started.html
 ## 1
-npm install -g react-native-cli
+sudo npm install -g react-native-cli
 
 # https://developer.android.com/studio/index.html
 cd ~/Documents
