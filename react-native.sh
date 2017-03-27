@@ -24,3 +24,4 @@ echo "export ANDROID_HOME=\${HOME}/Android/Sdk" >> ~/.bash_custom
 echo "export PATH=\${PATH}:\${ANDROID_HOME}/tools" >> ~/.bash_custom
 echo "export PATH=\${PATH}:\${ANDROID_HOME}/platform-tools" >> ~/.bash_custom
 
+# https://discuss.circleci.com/t/android-build-tools-23-0-2-not-available/455
