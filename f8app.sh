@@ -8,6 +8,7 @@ yarn
 # npm start 
 # npm run import-data
 # react-native run-android
+# react-native start
 # adb reverse tcp:8081 tcp:8081   # required to ensure the Android app can
 # adb reverse tcp:8080 tcp:8080   # access the Packager
 
