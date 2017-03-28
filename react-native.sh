@@ -32,3 +32,4 @@ echo "MYAPP_RELEASE_STORE_PASSWORD=$(get_random_password)" >> ~/.gradle/gradle.p
 echo "MYAPP_RELEASE_KEY_PASSWORD=$(get_random_password)" >> ~/.gradle/gradle.properties
 
 # https://discuss.circleci.com/t/android-build-tools-23-0-2-not-available/455
+# adb reverse tcp:8081 tcp:8081
