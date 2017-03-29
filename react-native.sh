@@ -26,6 +26,7 @@ echo "export PATH=\${PATH}:\${ANDROID_HOME}/platform-tools" >> ~/.bash_custom
 
 # gradle
 # https://facebook.github.io/react-native/docs/signed-apk-android.html
+mkdir ~/.gradle
 echo "MYAPP_RELEASE_STORE_FILE=my-release-key.keystore" >> ~/.gradle/gradle.properties
 echo "MYAPP_RELEASE_KEY_ALIAS=my-key-alias" >> ~/.gradle/gradle.properties
 echo "MYAPP_RELEASE_STORE_PASSWORD=$(get_random_password)" >> ~/.gradle/gradle.properties
