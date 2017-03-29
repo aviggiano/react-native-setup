@@ -15,7 +15,7 @@ cd android-studio/bin
 sudo ln -s $(pwd)/studio.sh /usr/bin/android-studio 
 
 # https://developer.android.com/studio/install.html
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
 
 ## 2
 ## 3
