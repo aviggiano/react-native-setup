@@ -44,3 +44,22 @@ for i in b10-1.mov b10-2.mov b10-3.mov b10-4.mov b1-1.mov b1-2.mov b1-3.mov b1-4
 	chmod 644 $(pwd)/$i
 done
 
+# remove gnome-screensaver
+sudo apt-get remove gnome-screensaver
+
+# remove screensaver keyboard shortcut
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '""'
+
+# add xscreensaver to Ctrl+Shift+L keyboard shortcut
+SHORTCUTS=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
+SHORTCUTS_COUNT=$(echo "$SHORTCUTS" | awk -F',' '{print NF}')
+NEW_SHORTCUT="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$SHORTCUTS_COUNT/"
+SHORTCUTS_PLUS_NEW=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings | underscore process "data.concat('$NEW_SHORTCUT')" --outfmt dense)
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$SHORTCUTS_PLUS_NEW"
+gsettings set "org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$NEW_SHORTCUT" name "'xscreensaver'"
+gsettings set "org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$NEW_SHORTCUT" binding "'<Ctrl><Alt>l'"
+gsettings set "org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$NEW_SHORTCUT" command "'/usr/bin/xscreensaver-command -lock'"
+
+# add xscreensaver to startup
+crontab -l | { cat; echo -e "@reboot /usr/bin/xscreensaver -nosplash\n"; } | crontab -
+
