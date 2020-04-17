@@ -1,6 +1,13 @@
 export JAVA_HOME=/Library/Java/Home
-export PATH="/usr/local/Cellar/node/11.2.0/bin:$PATH"
+export USDZPYTHON=/Volumes/Mac/Applications/usdpython\ 0.62/usdpython/usdzconvert
+export USD=/Volumes/Mac/Applications/usdpython\ 0.62/usdpython/USD
+export PYTHONPATH=$HOME/Library/Python/2.7/bin
 
+export PATH="/usr/local/Cellar/node/11.2.0/bin:$PATH"
+export PATH="$USD:$PATH"
+export PATH="$USDZPYTHON:$PATH"
+export PATH="$PYTHONPATH:$PATH"
+export PYTHONPATH="$PYTHONPATH:$USD/lib/python"
 # export ANT_HOME=/usr/local/opt/ant
 # export MAVEN_HOME=/usr/local/opt/maven
 # export GRADLE_HOME=/usr/local/opt/gradle
@@ -13,3 +20,4 @@ export PATH="/usr/local/Cellar/node/11.2.0/bin:$PATH"
 # export PATH=$ANDROID_HOME/tools:$PATH
 # export PATH=$ANDROID_HOME/platform-tools:$PATH
 # export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
+
